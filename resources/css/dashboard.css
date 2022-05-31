@@ -1,0 +1,64 @@
+/*--------------------------------------------------------------
+#    Dashboard Layout
+--------------------------------------------------------------*/
+#sidebar-wrapper {
+    position: fixed;
+    margin-left: 0;
+    max-width: 15rem;
+    min-height: 100vh;
+    border-right: 1px solid #ececec;
+    z-index: 1000;
+}
+#sidebar-wrapper .list-group {
+    width: 15rem;
+    overflow: auto;
+    padding-bottom: 15em;
+}
+.list-group-item.active::before,
+.list-group-item::before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    bottom: 0px;
+    width: 0;
+    height: 100%;
+    transition: 0.35s;
+    background-image: linear-gradient(to right, #1c46d0 , transparent);
+}
+.list-group-item.active::before,
+.list-group-item:hover::before {
+    width: 100%;
+}
+.list-group-item.active,
+.list-group-item:hover {
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+#page-content-wrapper {
+    margin-left: 15rem;
+    overflow-x: hidden;
+}
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+}
+#wrapper.toggled #page-content-wrapper {
+    margin-left: 0;
+}
+#wrapper.toggled #menu-toggle {
+    transform: rotate(180deg);
+}
+#nav-header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+@media (min-width: 768px) {
+    #nav-header {
+        width: calc(100% - 15rem);
+        left: 15rem;
+    }
+    #wrapper.toggled #nav-header  {
+        left: 0;
+        width: 100%;
+    }
+}
