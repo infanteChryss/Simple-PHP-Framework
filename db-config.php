@@ -2,7 +2,7 @@
 
 
 /** MySQL database name */
-define('DB_NAME', 'icted117_db');
+define('DB_NAME', 'test');
 
 /** MySQL database username */
 define('DB_USER', 'root');

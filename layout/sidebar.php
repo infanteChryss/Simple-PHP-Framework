@@ -19,12 +19,6 @@
                 <div class="sr-only">Icon for</div> Users
             </div>
         </a>
-        <a href="<?=root_url('students')?>" class="list-group-item bg-transparent border-0 text-decoration-none px-0 rounded-0<?=($pagetitle=='students'?' active':'')?>">
-            <div class="pl-3">
-                <i class="fa-solid fa-users-medical mr-2" aria-hidden="true"></i>
-                <div class="sr-only">Icon for</div> Patients
-            </div>
-        </a>
         <a href="<?=root_url('logout')?>" class="list-group-item bg-transparent border-0 text-decoration-none px-0 rounded-0">
             <div class="pl-3">
                 <i class="fas fa-power-off mr-2" aria-hidden="true"></i>
